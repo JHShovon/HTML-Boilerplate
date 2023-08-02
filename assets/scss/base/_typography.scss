@@ -1,0 +1,266 @@
+/***************************************
+* Typography
+***************************************/
+
+/* HTML Heading Tags */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 2.5rem;
+    line-height: 1.1;
+    @include breakpoint(medium) {
+        font-size: 4rem;
+    }
+}
+
+h2 {
+    font-size: 2rem;
+    line-height: 1.2;
+    @include breakpoint(medium) {
+        font-size: 3rem;
+    }
+}
+
+h3 {
+    font-size: 1.5rem;
+    line-height: 1.2;
+    @include breakpoint(medium) {
+        font-size: 2rem;
+    }
+}
+
+h4 {
+    font-size: 1.25rem;
+    line-height: 1.4;
+    @include breakpoint(medium) {
+        font-size: 1.5rem;
+    }
+}
+
+h5 {
+    font-size: 1rem;
+    line-height: 1.5;
+    @include breakpoint(medium) {
+        font-size: 1.25rem;
+    }
+}
+
+h6 {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    @include breakpoint(medium) {
+        font-size: 1rem;
+    }
+}
+
+/* Other HTML Tags */
+p {
+    font-size: inherit;
+}
+
+a {
+    color: blue;
+    text-decoration: none;
+}
+
+blockquote {
+    margin-bottom: 0;
+    border-left: 0.25 solid $border-color;
+    padding: 0rem 1.25rem;
+}
+
+ul,
+ol {
+    margin: 0rem 0 0rem 1.5rem;
+
+    li {
+        margin-bottom: 0.25rem;
+    }
+}
+
+/* Heading Styles - Heading classes when typography style doesn't match the default HTML tag.  */
+.heading-style-h1 {
+    font-size: 2.5rem;
+    line-height: 1.1;
+    @include breakpoint(medium) {
+        font-size: 4rem;
+    }
+}
+
+.heading-style-h2 {
+    font-size: 2rem;
+    line-height: 1.2;
+    @include breakpoint(medium) {
+        font-size: 3rem;
+    }
+}
+
+.heading-style-h3 {
+    font-size: 1.5rem;
+    line-height: 1.2;
+    @include breakpoint(medium) {
+        font-size: 2rem;
+    }
+}
+
+.heading-style-h4 {
+    font-size: 1.25rem;
+    line-height: 1.4;
+    @include breakpoint(medium) {
+        font-size: 1.5rem;
+    }
+}
+
+.heading-style-h5 {
+    font-size: 1rem;
+    line-height: 1.5;
+    @include breakpoint(medium) {
+        font-size: 1.25rem;
+    }
+}
+
+.heading-style-h6 {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    @include breakpoint(medium) {
+        font-size: 1rem;
+    }
+}
+
+/* Text Classes - Text classes when typography style doesn't match the default HTML tag.  */
+/* Text Sizes */
+.text-size-large {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    @include breakpoint(medium) {
+        font-size: 1.5rem;
+    }
+}
+.text-size-medium {
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
+.text-size-regular {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+.text-size-tiny {
+    font-size: 0.75rem;
+    line-height: 1.5;
+}
+
+/* Text Styles */
+.text-style-strikethrough {
+    text-decoration: line-through;
+}
+
+.text-style-italic {
+    font-style: italic;
+}
+
+.text-style-muted {
+    opacity: 0.6;
+}
+
+.text-style-allcaps {
+    text-transform: uppercase;
+}
+
+.text-style-nowrap {
+    white-space: nowrap;
+}
+
+.text-style-link {
+    color: #000;
+    text-decoration: underline;
+}
+
+.text-style-quote {
+    border-left: 0.25 solid $border-color;
+    padding: 0rem 1.125rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
+
+/* Text Weights */
+.text-weight-black {
+    font-weight: 900;
+}
+.text-weight-xbold {
+    font-weight: 800;
+}
+.text-weight-bold {
+    font-weight: 700;
+}
+.text-weight-semibold {
+    font-weight: 600;
+}
+.text-weight-medium {
+    font-weight: 500;
+}
+.text-weight-normal {
+    font-weight: 400;
+}
+.text-weight-normal {
+    font-weight: 400;
+}
+.text-weight-light {
+    font-weight: 300;
+}
+
+/* Text Alignments */
+.text-align-left {
+    text-align: left;
+}
+.text-align-center {
+    text-align: center;
+}
+.text-align-right {
+    text-align: right;
+}
+
+/* Text Color */
+.text-color-black {
+    color: $color-black;
+}
+.text-color-grey {
+    color: $color-grey;
+}
+.text-color-white {
+    background-color: $color-black;
+    color: $color-white;
+}
+
+/* Icons - Unify icons sizes. icon-height sets height of icons. icon-1x1 sets both height and width of icons. */
+.icon-height-small {
+    width: auto;
+    height: 1rem;
+}
+.icon-height-medium {
+    width: auto;
+    height: 2rem;
+}
+.icon-height-large {
+    width: auto;
+    height: 3rem;
+}
+.icon-1x1-small {
+    width: 1rem;
+    height: 1rem;
+}
+.icon-1x1-medium {
+    width: 2rem;
+    height: 2rem;
+}
+.icon-1x1-large {
+    width: 2.5rem;
+    height: 2.5rem;
+}

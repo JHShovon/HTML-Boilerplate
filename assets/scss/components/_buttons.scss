@@ -1,0 +1,42 @@
+.button-group {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
+    gap: 1rem;
+}
+
+.button {
+    background-color: #000;
+    padding: 0.75rem 1.5rem;
+    color: #fff;
+    font-weight: 600;
+}
+
+.is-small {
+    @extend .button;
+    padding: 0.5rem 1.25rem;
+}
+.is-large {
+    @extend .button;
+    padding: 0.5rem 1.25rem;
+}
+.is-border {
+    @extend .button;
+    border: 2px solid #000;
+    background-color: transparent;
+    color: #000;
+}
+.is-text {
+    @extend .button;
+    border: 2px solid transparent;
+    background-color: transparent;
+    color: #000;
+}
+.is-icon {
+    @extend .button;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}

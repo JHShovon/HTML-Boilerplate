@@ -1,0 +1,105 @@
+/***************************************
+* Elements
+***************************************/
+/* Native elements with Client-First classes applied. */
+.form_component {
+    margin-bottom: 0rem;
+}
+
+.form_form {
+    display: block;
+}
+
+.form_field-wrapper {
+    display: block;
+}
+
+.form_label {
+    margin-bottom: 0.25rem;
+    font-weight: 500;
+}
+
+.form_input {
+    margin-bottom: 0.75rem;
+    border: 1px solid $border-color;
+    background: transparent;
+    padding: 0.5rem 1rem;
+    min-height: 3rem;
+}
+
+.is-text-area {
+    @extend .form_input;
+    padding-top: 0.75rem;
+    min-height: 8rem;
+}
+.is-select-input {
+    @extend .form_input;
+}
+
+.form_checkbox {
+    display: flex;
+    position: relative;
+    align-items: center;
+
+    .form_label {
+        margin-bottom: 0rem;
+        margin-left: 2rem;
+    }
+    /* Hide the browser's default checkbox */
+    input[type="checkbox"] {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        width: 0;
+        height: 0;
+    }
+
+    /* Create a custom checkbox */
+    .checkmark {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        background-color: #eee;
+        width: 25px;
+        height: 25px;
+        z-index: 2;
+    }
+
+    // On mouse-over, add a grey background color
+    &:hover input ~ .checkmark {
+        background-color: #ccc;
+    }
+
+    //  When the checkbox is checked, add a blue background
+    input:checked ~ .checkmark {
+        background-color: #2196f3;
+
+        @include theme(dark) {
+            background-color: red;
+        }
+    }
+
+    // Create the checkmark/indicator (hidden when not checked)
+    .checkmark::after {
+        display: none;
+        position: absolute;
+        content: "";
+    }
+
+    // Show the checkmark when checked
+    & input:checked ~ .checkmark:after {
+        display: block;
+    }
+
+    // Style the checkmark/indicator
+    & .checkmark:after {
+        top: 5px;
+        left: 9px;
+        transform: rotate(45deg);
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        width: 5px;
+        height: 10px;
+    }
+}

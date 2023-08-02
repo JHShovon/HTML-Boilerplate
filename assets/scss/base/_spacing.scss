@@ -1,0 +1,407 @@
+/***************************************
+* Spacing
+***************************************/
+.max-width-full {
+    width: 100%;
+    max-width: none;
+}
+.max-width-full-tablet {
+    @extend .max-width-full;
+    @include breakpoint(large) {
+        width: auto;
+    }
+}
+.max-width-full-mobile-portrait {
+    @extend .max-width-full;
+    @include breakpoint(small) {
+        width: auto;
+    }
+}
+.max-width-full-mobile-landscape {
+    @extend .max-width-full;
+    @include breakpoint(medium) {
+        width: auto;
+    }
+}
+
+.max-width-xxlarge {
+    width: 100%;
+    max-width: 80rem;
+}
+.max-width-xlarge {
+    width: 100%;
+    max-width: 64rem;
+}
+.max-width-large {
+    width: 100%;
+    max-width: 48rem;
+}
+.max-width-medium {
+    width: 100%;
+    max-width: 32rem;
+}
+.max-width-small {
+    width: 100%;
+    max-width: 20rem;
+}
+.max-width-xsmall {
+    width: 100%;
+    max-width: 16rem;
+}
+.max-width-xxsmall {
+    width: 100%;
+    max-width: 112rem;
+}
+
+/* Paddings - Utility spacing system - padding classes. [padding-direction] + [padding-size]. */
+/* Padding Direction */
+.padding-bottom {
+    padding-top: 0rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
+}
+.padding-top {
+    padding-right: 0rem;
+    padding-bottom: 0rem;
+    padding-left: 0rem;
+}
+.padding-vertical {
+    padding-right: 0rem;
+    padding-left: 0rem;
+}
+.padding-horizontal {
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+}
+.padding-left {
+    padding-top: 0rem;
+    padding-right: 0rem;
+    padding-bottom: 0rem;
+}
+.padding-right {
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+    padding-left: 0rem;
+}
+
+/* Padding Size */
+.padding-0 {
+    padding: 0rem;
+}
+
+.padding-tiny {
+    padding: 0.125rem;
+}
+
+.padding-xxsmall {
+    padding: 0.25rem;
+}
+
+.padding-xsmall {
+    padding: 0.5rem;
+}
+
+.padding-small {
+    padding: 1rem;
+}
+
+.padding-medium {
+    padding: 1.25rem;
+    @include breakpoint(medium) {
+        padding: 1.5rem;
+    }
+    @include breakpoint(large) {
+        padding: 2rem;
+    }
+}
+.padding-medium {
+    padding: 1.25rem;
+    @include breakpoint(medium) {
+        padding: 1.5rem;
+    }
+    @include breakpoint(large) {
+        padding: 2rem;
+    }
+}
+.padding-large {
+    padding: 1.5rem;
+    @include breakpoint(medium) {
+        padding: 2.5rem;
+    }
+    @include breakpoint(large) {
+        padding: 3rem;
+    }
+}
+.padding-xlarge {
+    padding: 2rem;
+    @include breakpoint(medium) {
+        padding: 3rem;
+    }
+    @include breakpoint(large) {
+        padding: 4rem;
+    }
+}
+.padding-xxlarge {
+    padding: 3rem;
+    @include breakpoint(medium) {
+        padding: 4rem;
+    }
+    @include breakpoint(large) {
+        padding: 5rem;
+    }
+}
+.padding-huge {
+    padding: 3.5rem;
+    @include breakpoint(medium) {
+        padding: 5rem;
+    }
+    @include breakpoint(large) {
+        padding: 6rem;
+    }
+}
+.padding-xhuge {
+    padding: 4rem;
+    @include breakpoint(medium) {
+        padding: 6rem;
+    }
+    @include breakpoint(large) {
+        padding: 8rem;
+    }
+}
+.padding-xhuge {
+    padding: 4rem;
+    @include breakpoint(medium) {
+        padding: 6rem;
+    }
+    @include breakpoint(large) {
+        padding: 8rem;
+    }
+}
+.padding-xxhuge {
+    padding: 4.5rem;
+    @include breakpoint(medium) {
+        padding: 8rem;
+    }
+    @include breakpoint(large) {
+        padding: 12rem;
+    }
+}
+.padding-custom1 {
+    padding: 1.5rem;
+}
+.padding-custom2 {
+    padding: 2.5rem;
+}
+.padding-custom3 {
+    padding: 3.5rem;
+}
+
+/* Margin - Utility spacing system - margin classes. [margin-direction] + [margin-size]. */
+/* Margin Direction */
+.margin-bottom {
+    margin-top: 0rem;
+    margin-right: 0rem;
+    margin-left: 0rem;
+}
+.margin-top {
+    margin-right: 0rem;
+    margin-bottom: 0rem;
+    margin-left: 0rem;
+}
+.margin-vertical {
+    margin-right: 0rem;
+    margin-left: 0rem;
+}
+.margin-horizontal {
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+}
+.margin-left {
+    margin-top: 0rem;
+    margin-right: 0rem;
+    margin-bottom: 0rem;
+}
+.margin-right {
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    margin-left: 0rem;
+}
+
+/* margin Size */
+.margin-0 {
+    margin: 0rem;
+}
+
+.margin-tiny {
+    margin: 0.125rem;
+}
+
+.margin-xxsmall {
+    margin: 0.25rem;
+}
+
+.margin-xsmall {
+    margin: 0.5rem;
+}
+
+.margin-small {
+    margin: 1rem;
+}
+
+.margin-medium {
+    margin: 1.25rem;
+    @include breakpoint(medium) {
+        margin: 1.5rem;
+    }
+    @include breakpoint(large) {
+        margin: 2rem;
+    }
+}
+.margin-medium {
+    margin: 1.25rem;
+    @include breakpoint(medium) {
+        margin: 1.5rem;
+    }
+    @include breakpoint(large) {
+        margin: 2rem;
+    }
+}
+.margin-large {
+    margin: 1.5rem;
+    @include breakpoint(medium) {
+        margin: 2.5rem;
+    }
+    @include breakpoint(large) {
+        margin: 3rem;
+    }
+}
+.margin-xlarge {
+    margin: 2rem;
+    @include breakpoint(medium) {
+        margin: 3rem;
+    }
+    @include breakpoint(large) {
+        margin: 4rem;
+    }
+}
+.margin-xxlarge {
+    margin: 3rem;
+    @include breakpoint(medium) {
+        margin: 4rem;
+    }
+    @include breakpoint(large) {
+        margin: 5rem;
+    }
+}
+.margin-huge {
+    margin: 3.5rem;
+    @include breakpoint(medium) {
+        margin: 5rem;
+    }
+    @include breakpoint(large) {
+        margin: 6rem;
+    }
+}
+.margin-xhuge {
+    margin: 4rem;
+    @include breakpoint(medium) {
+        margin: 6rem;
+    }
+    @include breakpoint(large) {
+        margin: 8rem;
+    }
+}
+.margin-xhuge {
+    margin: 4rem;
+    @include breakpoint(medium) {
+        margin: 6rem;
+    }
+    @include breakpoint(large) {
+        margin: 8rem;
+    }
+}
+.margin-xxhuge {
+    margin: 4.5rem;
+    @include breakpoint(medium) {
+        margin: 8rem;
+    }
+    @include breakpoint(large) {
+        margin: 12rem;
+    }
+}
+.margin-custom1 {
+    margin: 1.5rem;
+}
+.margin-custom2 {
+    margin: 2.5rem;
+}
+.margin-custom3 {
+    margin: 3.5rem;
+}
+
+/* Spacers - Unified spacer system for the project. */
+/* Padding Size */
+.spacer-full-width {
+    width: 100%;
+}
+.spacer-0 {
+    padding-top: 0rem;
+    @extend .spacer-full-width;
+}
+
+.spacer-tiny {
+    padding-top: 0.125rem;
+    @extend .spacer-full-width;
+}
+
+.spacer-xxsmall {
+    padding-top: 0.25rem;
+    @extend .spacer-full-width;
+}
+
+.spacer-xsmall {
+    padding-top: 0.5rem;
+    @extend .spacer-full-width;
+}
+
+.spacer-small {
+    padding-top: 1rem;
+    @extend .spacer-full-width;
+}
+
+.spacer-medium {
+    padding-top: 1.25rem;
+    @extend .spacer-full-width;
+}
+.spacer-medium {
+    padding-top: 1.25rem;
+    @extend .spacer-full-width;
+}
+.spacer-large {
+    padding-top: 1.5rem;
+    @extend .spacer-full-width;
+}
+.spacer-xlarge {
+    padding-top: 2rem;
+    @extend .spacer-full-width;
+}
+.spacer-xxlarge {
+    padding-top: 3rem;
+    @extend .spacer-full-width;
+}
+.spacer-huge {
+    padding-top: 3.5rem;
+    @extend .spacer-full-width;
+}
+.spacer-xhuge {
+    padding-top: 4rem;
+    @extend .spacer-full-width;
+}
+.spacer-xhuge {
+    padding-top: 4rem;
+    @extend .spacer-full-width;
+}
+.spacer-xxhuge {
+    padding-top: 4.5rem;
+    @extend .spacer-full-width;
+}

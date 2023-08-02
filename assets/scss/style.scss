@@ -1,0 +1,36 @@
+/* Import SCSS partials from different directories */
+
+/* Abstracts */
+@import "abstracts/variables";
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/placeholders";
+
+/* Base */
+@import "base/reset";
+@import "base/structure";
+@import "base/typography";
+@import "base/spacing";
+@import "base/utilities";
+@import "base/elements";
+
+/* Components */
+@import "components/buttons";
+@import "components/navbar";
+@import "components/modal";
+
+/* Layout */
+@import "layout/header";
+@import "layout/footer";
+@import "layout/sidebar";
+
+/* Pages */
+@import "pages/home";
+@import "pages/about";
+@import "pages/contact";
+
+/* Additional global styles, if any */
+// @import 'global-styles';
+
+/* Your custom styles, if any */
+// @import 'custom-styles';

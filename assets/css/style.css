@@ -1,0 +1,1317 @@
+/* Import SCSS partials from different directories */
+/* Abstracts */
+/* Base */
+*,
+::before,
+::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  color-scheme: dark light;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+image,
+picture,
+video,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/***************************************
+* Page Structure
+***************************************/
+.page-wrapper {
+  overflow: inherit;
+}
+
+.main-wrapper {
+  overflow: inherit;
+}
+
+/* Structure - Container */
+.container-default, .container-large, .container-medium, .container-small {
+  margin-inline: auto;
+  width: 100%;
+}
+
+.container-small {
+  max-width: 48rem;
+}
+
+.container-medium {
+  max-width: 64rem;
+}
+
+.container-large {
+  max-width: 80rem;
+}
+
+/*  Structure - Padding Global(global section padding left and right) */
+.padding-global {
+  padding-inline: 1.25rem;
+}
+@media (min-width: 768px) {
+  .padding-global {
+    padding-inline: 2.5rem;
+  }
+}
+
+/* Structure - Padding Section(section padding Top and Bottom) */
+.padding-section-small {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+@media (min-width: 768px) {
+  .padding-section-small {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+
+.padding-section-small {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+@media (min-width: 768px) {
+  .padding-section-small {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+
+.padding-section-medium {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+@media (min-width: 768px) {
+  .padding-section-medium {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+@media (min-width: 992px) {
+  .padding-section-medium {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+
+.padding-section-large {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+@media (min-width: 768px) {
+  .padding-section-large {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+@media (min-width: 992px) {
+  .padding-section-large {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+}
+
+/***************************************
+* Typography
+***************************************/
+/* HTML Heading Tags */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 2.5rem;
+  line-height: 1.1;
+}
+@media (min-width: 768px) {
+  h1 {
+    font-size: 4rem;
+  }
+}
+
+h2 {
+  font-size: 2rem;
+  line-height: 1.2;
+}
+@media (min-width: 768px) {
+  h2 {
+    font-size: 3rem;
+  }
+}
+
+h3 {
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+@media (min-width: 768px) {
+  h3 {
+    font-size: 2rem;
+  }
+}
+
+h4 {
+  font-size: 1.25rem;
+  line-height: 1.4;
+}
+@media (min-width: 768px) {
+  h4 {
+    font-size: 1.5rem;
+  }
+}
+
+h5 {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+@media (min-width: 768px) {
+  h5 {
+    font-size: 1.25rem;
+  }
+}
+
+h6 {
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+@media (min-width: 768px) {
+  h6 {
+    font-size: 1rem;
+  }
+}
+
+/* Other HTML Tags */
+p {
+  font-size: inherit;
+}
+
+a {
+  color: blue;
+  text-decoration: none;
+}
+
+blockquote {
+  margin-bottom: 0;
+  border-left: 0.25 solid #e2e2e2;
+  padding: 0rem 1.25rem;
+}
+
+ul,
+ol {
+  margin: 0rem 0 0rem 1.5rem;
+}
+ul li,
+ol li {
+  margin-bottom: 0.25rem;
+}
+
+/* Heading Styles - Heading classes when typography style doesn't match the default HTML tag.  */
+.heading-style-h1 {
+  font-size: 2.5rem;
+  line-height: 1.1;
+}
+@media (min-width: 768px) {
+  .heading-style-h1 {
+    font-size: 4rem;
+  }
+}
+
+.heading-style-h2 {
+  font-size: 2rem;
+  line-height: 1.2;
+}
+@media (min-width: 768px) {
+  .heading-style-h2 {
+    font-size: 3rem;
+  }
+}
+
+.heading-style-h3 {
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+@media (min-width: 768px) {
+  .heading-style-h3 {
+    font-size: 2rem;
+  }
+}
+
+.heading-style-h4 {
+  font-size: 1.25rem;
+  line-height: 1.4;
+}
+@media (min-width: 768px) {
+  .heading-style-h4 {
+    font-size: 1.5rem;
+  }
+}
+
+.heading-style-h5 {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+@media (min-width: 768px) {
+  .heading-style-h5 {
+    font-size: 1.25rem;
+  }
+}
+
+.heading-style-h6 {
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+@media (min-width: 768px) {
+  .heading-style-h6 {
+    font-size: 1rem;
+  }
+}
+
+/* Text Classes - Text classes when typography style doesn't match the default HTML tag.  */
+/* Text Sizes */
+.text-size-large {
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+@media (min-width: 768px) {
+  .text-size-large {
+    font-size: 1.5rem;
+  }
+}
+
+.text-size-medium {
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.text-size-regular {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.text-size-tiny {
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+
+/* Text Styles */
+.text-style-strikethrough {
+  text-decoration: line-through;
+}
+
+.text-style-italic {
+  font-style: italic;
+}
+
+.text-style-muted {
+  opacity: 0.6;
+}
+
+.text-style-allcaps {
+  text-transform: uppercase;
+}
+
+.text-style-nowrap {
+  white-space: nowrap;
+}
+
+.text-style-link {
+  color: #000;
+  text-decoration: underline;
+}
+
+.text-style-quote {
+  border-left: 0.25 solid #e2e2e2;
+  padding: 0rem 1.125rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+/* Text Weights */
+.text-weight-black {
+  font-weight: 900;
+}
+
+.text-weight-xbold {
+  font-weight: 800;
+}
+
+.text-weight-bold {
+  font-weight: 700;
+}
+
+.text-weight-semibold {
+  font-weight: 600;
+}
+
+.text-weight-medium {
+  font-weight: 500;
+}
+
+.text-weight-normal {
+  font-weight: 400;
+}
+
+.text-weight-normal {
+  font-weight: 400;
+}
+
+.text-weight-light {
+  font-weight: 300;
+}
+
+/* Text Alignments */
+.text-align-left {
+  text-align: left;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+/* Text Color */
+.text-color-black {
+  color: #000;
+}
+
+.text-color-grey {
+  color: #f5f5f5;
+}
+
+.text-color-white {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Icons - Unify icons sizes. icon-height sets height of icons. icon-1x1 sets both height and width of icons. */
+.icon-height-small {
+  width: auto;
+  height: 1rem;
+}
+
+.icon-height-medium {
+  width: auto;
+  height: 2rem;
+}
+
+.icon-height-large {
+  width: auto;
+  height: 3rem;
+}
+
+.icon-1x1-small {
+  width: 1rem;
+  height: 1rem;
+}
+
+.icon-1x1-medium {
+  width: 2rem;
+  height: 2rem;
+}
+
+.icon-1x1-large {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+/***************************************
+* Spacing
+***************************************/
+.max-width-full, .max-width-full-mobile-landscape, .max-width-full-mobile-portrait, .max-width-full-tablet {
+  width: 100%;
+  max-width: none;
+}
+
+@media (min-width: 992px) {
+  .max-width-full-tablet {
+    width: auto;
+  }
+}
+
+@media (min-width: 576px) {
+  .max-width-full-mobile-portrait {
+    width: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .max-width-full-mobile-landscape {
+    width: auto;
+  }
+}
+
+.max-width-xxlarge {
+  width: 100%;
+  max-width: 80rem;
+}
+
+.max-width-xlarge {
+  width: 100%;
+  max-width: 64rem;
+}
+
+.max-width-large {
+  width: 100%;
+  max-width: 48rem;
+}
+
+.max-width-medium {
+  width: 100%;
+  max-width: 32rem;
+}
+
+.max-width-small {
+  width: 100%;
+  max-width: 20rem;
+}
+
+.max-width-xsmall {
+  width: 100%;
+  max-width: 16rem;
+}
+
+.max-width-xxsmall {
+  width: 100%;
+  max-width: 112rem;
+}
+
+/* Paddings - Utility spacing system - padding classes. [padding-direction] + [padding-size]. */
+/* Padding Direction */
+.padding-bottom {
+  padding-top: 0rem;
+  padding-right: 0rem;
+  padding-left: 0rem;
+}
+
+.padding-top {
+  padding-right: 0rem;
+  padding-bottom: 0rem;
+  padding-left: 0rem;
+}
+
+.padding-vertical {
+  padding-right: 0rem;
+  padding-left: 0rem;
+}
+
+.padding-horizontal {
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+}
+
+.padding-left {
+  padding-top: 0rem;
+  padding-right: 0rem;
+  padding-bottom: 0rem;
+}
+
+.padding-right {
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+  padding-left: 0rem;
+}
+
+/* Padding Size */
+.padding-0 {
+  padding: 0rem;
+}
+
+.padding-tiny {
+  padding: 0.125rem;
+}
+
+.padding-xxsmall {
+  padding: 0.25rem;
+}
+
+.padding-xsmall {
+  padding: 0.5rem;
+}
+
+.padding-small {
+  padding: 1rem;
+}
+
+.padding-medium {
+  padding: 1.25rem;
+}
+@media (min-width: 768px) {
+  .padding-medium {
+    padding: 1.5rem;
+  }
+}
+@media (min-width: 992px) {
+  .padding-medium {
+    padding: 2rem;
+  }
+}
+
+.padding-medium {
+  padding: 1.25rem;
+}
+@media (min-width: 768px) {
+  .padding-medium {
+    padding: 1.5rem;
+  }
+}
+@media (min-width: 992px) {
+  .padding-medium {
+    padding: 2rem;
+  }
+}
+
+.padding-large {
+  padding: 1.5rem;
+}
+@media (min-width: 768px) {
+  .padding-large {
+    padding: 2.5rem;
+  }
+}
+@media (min-width: 992px) {
+  .padding-large {
+    padding: 3rem;
+  }
+}
+
+.padding-xlarge {
+  padding: 2rem;
+}
+@media (min-width: 768px) {
+  .padding-xlarge {
+    padding: 3rem;
+  }
+}
+@media (min-width: 992px) {
+  .padding-xlarge {
+    padding: 4rem;
+  }
+}
+
+.padding-xxlarge {
+  padding: 3rem;
+}
+@media (min-width: 768px) {
+  .padding-xxlarge {
+    padding: 4rem;
+  }
+}
+@media (min-width: 992px) {
+  .padding-xxlarge {
+    padding: 5rem;
+  }
+}
+
+.padding-huge {
+  padding: 3.5rem;
+}
+@media (min-width: 768px) {
+  .padding-huge {
+    padding: 5rem;
+  }
+}
+@media (min-width: 992px) {
+  .padding-huge {
+    padding: 6rem;
+  }
+}
+
+.padding-xhuge {
+  padding: 4rem;
+}
+@media (min-width: 768px) {
+  .padding-xhuge {
+    padding: 6rem;
+  }
+}
+@media (min-width: 992px) {
+  .padding-xhuge {
+    padding: 8rem;
+  }
+}
+
+.padding-xhuge {
+  padding: 4rem;
+}
+@media (min-width: 768px) {
+  .padding-xhuge {
+    padding: 6rem;
+  }
+}
+@media (min-width: 992px) {
+  .padding-xhuge {
+    padding: 8rem;
+  }
+}
+
+.padding-xxhuge {
+  padding: 4.5rem;
+}
+@media (min-width: 768px) {
+  .padding-xxhuge {
+    padding: 8rem;
+  }
+}
+@media (min-width: 992px) {
+  .padding-xxhuge {
+    padding: 12rem;
+  }
+}
+
+.padding-custom1 {
+  padding: 1.5rem;
+}
+
+.padding-custom2 {
+  padding: 2.5rem;
+}
+
+.padding-custom3 {
+  padding: 3.5rem;
+}
+
+/* Margin - Utility spacing system - margin classes. [margin-direction] + [margin-size]. */
+/* Margin Direction */
+.margin-bottom {
+  margin-top: 0rem;
+  margin-right: 0rem;
+  margin-left: 0rem;
+}
+
+.margin-top {
+  margin-right: 0rem;
+  margin-bottom: 0rem;
+  margin-left: 0rem;
+}
+
+.margin-vertical {
+  margin-right: 0rem;
+  margin-left: 0rem;
+}
+
+.margin-horizontal {
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+}
+
+.margin-left {
+  margin-top: 0rem;
+  margin-right: 0rem;
+  margin-bottom: 0rem;
+}
+
+.margin-right {
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+  margin-left: 0rem;
+}
+
+/* margin Size */
+.margin-0 {
+  margin: 0rem;
+}
+
+.margin-tiny {
+  margin: 0.125rem;
+}
+
+.margin-xxsmall {
+  margin: 0.25rem;
+}
+
+.margin-xsmall {
+  margin: 0.5rem;
+}
+
+.margin-small {
+  margin: 1rem;
+}
+
+.margin-medium {
+  margin: 1.25rem;
+}
+@media (min-width: 768px) {
+  .margin-medium {
+    margin: 1.5rem;
+  }
+}
+@media (min-width: 992px) {
+  .margin-medium {
+    margin: 2rem;
+  }
+}
+
+.margin-medium {
+  margin: 1.25rem;
+}
+@media (min-width: 768px) {
+  .margin-medium {
+    margin: 1.5rem;
+  }
+}
+@media (min-width: 992px) {
+  .margin-medium {
+    margin: 2rem;
+  }
+}
+
+.margin-large {
+  margin: 1.5rem;
+}
+@media (min-width: 768px) {
+  .margin-large {
+    margin: 2.5rem;
+  }
+}
+@media (min-width: 992px) {
+  .margin-large {
+    margin: 3rem;
+  }
+}
+
+.margin-xlarge {
+  margin: 2rem;
+}
+@media (min-width: 768px) {
+  .margin-xlarge {
+    margin: 3rem;
+  }
+}
+@media (min-width: 992px) {
+  .margin-xlarge {
+    margin: 4rem;
+  }
+}
+
+.margin-xxlarge {
+  margin: 3rem;
+}
+@media (min-width: 768px) {
+  .margin-xxlarge {
+    margin: 4rem;
+  }
+}
+@media (min-width: 992px) {
+  .margin-xxlarge {
+    margin: 5rem;
+  }
+}
+
+.margin-huge {
+  margin: 3.5rem;
+}
+@media (min-width: 768px) {
+  .margin-huge {
+    margin: 5rem;
+  }
+}
+@media (min-width: 992px) {
+  .margin-huge {
+    margin: 6rem;
+  }
+}
+
+.margin-xhuge {
+  margin: 4rem;
+}
+@media (min-width: 768px) {
+  .margin-xhuge {
+    margin: 6rem;
+  }
+}
+@media (min-width: 992px) {
+  .margin-xhuge {
+    margin: 8rem;
+  }
+}
+
+.margin-xhuge {
+  margin: 4rem;
+}
+@media (min-width: 768px) {
+  .margin-xhuge {
+    margin: 6rem;
+  }
+}
+@media (min-width: 992px) {
+  .margin-xhuge {
+    margin: 8rem;
+  }
+}
+
+.margin-xxhuge {
+  margin: 4.5rem;
+}
+@media (min-width: 768px) {
+  .margin-xxhuge {
+    margin: 8rem;
+  }
+}
+@media (min-width: 992px) {
+  .margin-xxhuge {
+    margin: 12rem;
+  }
+}
+
+.margin-custom1 {
+  margin: 1.5rem;
+}
+
+.margin-custom2 {
+  margin: 2.5rem;
+}
+
+.margin-custom3 {
+  margin: 3.5rem;
+}
+
+/* Spacers - Unified spacer system for the project. */
+/* Padding Size */
+.spacer-full-width, .spacer-xxhuge, .spacer-xhuge, .spacer-huge, .spacer-xxlarge, .spacer-xlarge, .spacer-large, .spacer-medium, .spacer-small, .spacer-xsmall, .spacer-xxsmall, .spacer-tiny, .spacer-0 {
+  width: 100%;
+}
+
+.spacer-0 {
+  padding-top: 0rem;
+}
+
+.spacer-tiny {
+  padding-top: 0.125rem;
+}
+
+.spacer-xxsmall {
+  padding-top: 0.25rem;
+}
+
+.spacer-xsmall {
+  padding-top: 0.5rem;
+}
+
+.spacer-small {
+  padding-top: 1rem;
+}
+
+.spacer-medium {
+  padding-top: 1.25rem;
+}
+
+.spacer-medium {
+  padding-top: 1.25rem;
+}
+
+.spacer-large {
+  padding-top: 1.5rem;
+}
+
+.spacer-xlarge {
+  padding-top: 2rem;
+}
+
+.spacer-xxlarge {
+  padding-top: 3rem;
+}
+
+.spacer-huge {
+  padding-top: 3.5rem;
+}
+
+.spacer-xhuge {
+  padding-top: 4rem;
+}
+
+.spacer-xhuge {
+  padding-top: 4rem;
+}
+
+.spacer-xxhuge {
+  padding-top: 4.5rem;
+}
+
+/***************************************
+* Utilities
+***************************************/
+/* Useful utility systems - Utility classes we like to use in most of our projects to build faster. */
+/* Hidden Classes - those are display none in CSS */
+.hide {
+  display: none;
+}
+
+.hide-tablet {
+  display: none;
+}
+@media (min-width: 992px) {
+  .hide-tablet {
+    display: block;
+  }
+}
+
+.hide-mobile-portrait {
+  display: none;
+}
+@media (min-width: 576px) {
+  .hide-mobile-portrait {
+    display: block;
+  }
+}
+
+.hide-mobile-landscape {
+  display: none;
+}
+@media (min-width: 768px) {
+  .hide-mobile-landscape {
+    display: block;
+  }
+} /* Overflow Classes */
+.overflow-visible {
+  overflow: visible;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.overflow-auto {
+  overflow: auto;
+}
+
+.overflow-scroll {
+  overflow: scroll;
+}
+
+/* Pointer Events */
+.pointer-events-on {
+  cursor: pointer;
+}
+
+.pointer-events-off {
+  cursor: none;
+}
+
+.layer {
+  position: absolute;
+  top: 0rem;
+  bottom: 0rem;
+  left: 0rem;
+  right: 0rem;
+}
+
+.spacing-clean {
+  margin: 0rem;
+  padding: 0rem;
+}
+
+.align-center {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.z-index-1 {
+  z-index: 1;
+}
+
+.z-index-2 {
+  z-index: 2;
+}
+
+/***************************************
+* Elements
+***************************************/
+/* Native elements with Client-First classes applied. */
+.form_component {
+  margin-bottom: 0rem;
+}
+
+.form_form {
+  display: block;
+}
+
+.form_field-wrapper {
+  display: block;
+}
+
+.form_label {
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+}
+
+.form_input, .is-select-input, .is-text-area {
+  margin-bottom: 0.75rem;
+  border: 1px solid #e2e2e2;
+  background: transparent;
+  padding: 0.5rem 1rem;
+  min-height: 3rem;
+}
+
+.is-text-area {
+  padding-top: 0.75rem;
+  min-height: 8rem;
+}
+
+.form_checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* Hide the browser's default checkbox */
+  /* Create a custom checkbox */
+}
+.form_checkbox .form_label {
+  margin-bottom: 0rem;
+  margin-left: 2rem;
+}
+.form_checkbox input[type=checkbox] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  width: 0;
+  height: 0;
+}
+.form_checkbox .checkmark {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-color: #eee;
+  width: 25px;
+  height: 25px;
+  z-index: 2;
+}
+.form_checkbox:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+.form_checkbox input:checked ~ .checkmark {
+  background-color: #2196f3;
+}
+@media (prefers-color-scheme: dark) {
+  .form_checkbox input:checked ~ .checkmark {
+    background-color: red;
+  }
+}
+.form_checkbox .checkmark::after {
+  display: none;
+  position: absolute;
+  content: "";
+}
+.form_checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+.form_checkbox .checkmark:after {
+  top: 5px;
+  left: 9px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  width: 5px;
+  height: 10px;
+}
+
+/* Components */
+.button-group {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+.button, .is-icon, .is-text, .is-border, .is-large, .is-small {
+  background-color: #000;
+  padding: 0.75rem 1.5rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+.is-small {
+  padding: 0.5rem 1.25rem;
+}
+
+.is-large {
+  padding: 0.5rem 1.25rem;
+}
+
+.is-border {
+  border: 2px solid #000;
+  background-color: transparent;
+  color: #000;
+}
+
+.is-text {
+  border: 2px solid transparent;
+  background-color: transparent;
+  color: #000;
+}
+
+.is-icon {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+/* Layout */
+/* Pages */
+/* Additional global styles, if any */
+/* Your custom styles, if any */

@@ -1,0 +1,79 @@
+/***************************************
+* Page Structure
+***************************************/
+
+.page-wrapper {
+    overflow: inherit;
+}
+
+.main-wrapper {
+    overflow: inherit;
+}
+
+/* Structure - Container */
+.container-default {
+    margin-inline: auto;
+    width: 100%;
+}
+.container-small {
+    @extend .container-default;
+    max-width: 48rem;
+}
+.container-medium {
+    @extend .container-default;
+    max-width: 64rem;
+}
+.container-large {
+    @extend .container-default;
+    max-width: 80rem;
+}
+
+/*  Structure - Padding Global(global section padding left and right) */
+.padding-global {
+    padding-inline: 1.25rem;
+    @include breakpoint(medium) {
+        padding-inline: 2.5rem;
+    }
+}
+
+/* Structure - Padding Section(section padding Top and Bottom) */
+.padding-section-small {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    @include breakpoint(medium) {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+}
+.padding-section-small {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    @include breakpoint(medium) {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+}
+.padding-section-medium {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    @include breakpoint(medium) {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+    @include breakpoint(large) {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+}
+.padding-section-large {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    @include breakpoint(medium) {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+    @include breakpoint(large) {
+        padding-top: 8rem;
+        padding-bottom: 8rem;
+    }
+}

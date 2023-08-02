@@ -1,0 +1,78 @@
+/***************************************
+* Utilities
+***************************************/
+/* Useful utility systems - Utility classes we like to use in most of our projects to build faster. */
+
+/* Hidden Classes - those are display none in CSS */
+.hide {
+    display: none;
+}
+
+.hide-tablet {
+    display: none;
+    @include breakpoint(large) {
+        display: block;
+    }
+}
+.hide-mobile-portrait {
+    display: none;
+    @include breakpoint(small) {
+        display: block;
+    }
+}
+.hide-mobile-landscape {
+    display: none;
+    @include breakpoint(medium) {
+        display: block;
+    }
+}
+
+/* Overflow Classes */
+.overflow-visible {
+    overflow: visible;
+}
+.overflow-hidden {
+    overflow: hidden;
+}
+.overflow-auto {
+    overflow: auto;
+}
+.overflow-scroll {
+    overflow: scroll;
+}
+
+/* Pointer Events */
+.pointer-events-on {
+    cursor: pointer;
+}
+.pointer-events-off {
+    cursor: none;
+}
+
+.layer {
+    position: absolute;
+    top: 0rem;
+    bottom: 0rem;
+    left: 0rem;
+    right: 0rem;
+}
+
+.div-square {
+}
+
+.spacing-clean {
+    margin: 0rem;
+    padding: 0rem;
+}
+
+.align-center {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.z-index-1 {
+    z-index: 1;
+}
+.z-index-2 {
+    z-index: 2;
+}
