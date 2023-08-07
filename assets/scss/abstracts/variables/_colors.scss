@@ -1,0 +1,16 @@
+// Color palette by Tailwind CSS
+@import "./color/tw-colors-palette";
+
+// Common Color
+$color-black: #000;
+$color-white: #fff;
+$color-grey: #f5f5f5;
+
+// Template Color
+$color-green: $tw-color-slate-900;
+
+// Theme Color
+$primary-color: $color-green;
+
+// Border-color
+$border-color: #e2e2e2;

@@ -9,7 +9,10 @@
 .form_form {
     display: block;
 }
-
+.form_field-wrapper,
+.form_input {
+    width: 100%;
+}
 .form_field-wrapper {
     display: block;
 }
@@ -25,6 +28,8 @@
     background: transparent;
     padding: 0.5rem 1rem;
     min-height: 3rem;
+    color: $color-black;
+    font-size: inherit;
 }
 
 .is-text-area {
@@ -36,70 +41,87 @@
     @extend .form_input;
 }
 
-.form_checkbox {
+/* Hide the browser's default checkbox */
+input[type="checkbox"],
+input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    width: 0;
+    height: 0;
+    z-index: -1;
+}
+
+/* Create a custom checkbox */
+.form_checkbox,
+.form_radiobox {
     display: flex;
     position: relative;
     align-items: center;
+}
 
-    .form_label {
-        margin-bottom: 0rem;
-        margin-left: 2rem;
-    }
-    /* Hide the browser's default checkbox */
-    input[type="checkbox"] {
-        position: absolute;
-        opacity: 0;
-        cursor: pointer;
-        width: 0;
-        height: 0;
-    }
+.form_checkbox-label {
+    margin-left: 2.5rem;
+}
 
-    /* Create a custom checkbox */
-    .checkmark {
-        position: absolute;
-        top: 50%;
-        left: 0;
-        transform: translateY(-50%);
-        background-color: #eee;
-        width: 25px;
-        height: 25px;
-        z-index: 2;
-    }
+.form_checkmark,
+.form_radio {
+    position: relative;
+    z-index: 1;
+}
 
-    // On mouse-over, add a grey background color
-    &:hover input ~ .checkmark {
-        background-color: #ccc;
-    }
+.form_checkmark::before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+    background-color: #eee;
+    border-radius: 2px;
+    width: 25px;
+    height: 25px;
+    content: "";
+    font-family: "FontAwesome";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
 
-    //  When the checkbox is checked, add a blue background
-    input:checked ~ .checkmark {
-        background-color: #2196f3;
+input[type="checkbox"]:checked ~ .form_checkmark::before {
+    color: #fff;
+    background-color: rgb(41, 55, 255);
+    content: "\f00c";
+}
 
-        @include theme(dark) {
-            background-color: red;
-        }
-    }
+// Create a custom radio-check
+.form_radio-label {
+    margin-left: 1rem;
+}
+.form_radio {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border: 1px solid #ededed;
+    background-color: #eee;
+    border-radius: 50%;
+}
+.form_radio::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
 
-    // Create the checkmark/indicator (hidden when not checked)
-    .checkmark::after {
-        display: none;
-        position: absolute;
-        content: "";
-    }
+input[type="radio"]:checked ~ .form_radio::before {
+    background-color: rgb(41, 55, 255);
+}
 
-    // Show the checkmark when checked
-    & input:checked ~ .checkmark:after {
-        display: block;
-    }
-
-    // Style the checkmark/indicator
-    & .checkmark:after {
-        top: 5px;
-        left: 9px;
-        transform: rotate(45deg);
-        border: solid white;
-        border-width: 0 3px 3px 0;
-        width: 5px;
-        height: 10px;
-    }
+.radio_list {
+    margin: 0;
 }

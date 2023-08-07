@@ -370,38 +370,31 @@
 }
 
 .spacer-medium {
-    padding-top: 1.25rem;
-    @extend .spacer-full-width;
-}
-.spacer-medium {
-    padding-top: 1.25rem;
-    @extend .spacer-full-width;
-}
-.spacer-large {
-    padding-top: 1.5rem;
-    @extend .spacer-full-width;
-}
-.spacer-xlarge {
     padding-top: 2rem;
     @extend .spacer-full-width;
 }
-.spacer-xxlarge {
+.spacer-large {
     padding-top: 3rem;
     @extend .spacer-full-width;
 }
+.spacer-xlarge {
+    padding-top: 4rem;
+    @extend .spacer-full-width;
+}
+.spacer-xxlarge {
+    padding-top: 5rem;
+    @extend .spacer-full-width;
+}
 .spacer-huge {
-    padding-top: 3.5rem;
+    padding-top: 6rem;
     @extend .spacer-full-width;
 }
+
 .spacer-xhuge {
-    padding-top: 4rem;
-    @extend .spacer-full-width;
-}
-.spacer-xhuge {
-    padding-top: 4rem;
+    padding-top: 8rem;
     @extend .spacer-full-width;
 }
 .spacer-xxhuge {
-    padding-top: 4.5rem;
+    padding-top: 12rem;
     @extend .spacer-full-width;
 }
